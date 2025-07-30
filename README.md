@@ -1,92 +1,92 @@
-# projeto_final
-Analise Exploratória de Dados com Python
-📊 Projeto de Análise de Dados - TELÓS & Neurotech
-Esse projeto teve como objetivo demonstrar um compilado sobre o aprendizado dos conteúdos passados no curso de Análise de Dados oferecido pela TELÓS e Neurotech.
+📊 Projeto Final - Análise de Dados do Varejo Pernambucano
+Este repositório contém o projeto final desenvolvido como parte do Trabalho de Conclusão de Curso da formação em Análise de Dados oferecida pela Telós & Neurotech.
 
-🎯 Objetivo Geral
-Realizar uma análise profunda e visualmente compreensível de um conjunto de bases de dados do varejo, integrando conhecimentos de tratamento de dados, exploração analítica (EDA), geração de insights de negócio e criação de visualizações impactantes para comunicação executiva.
+📌 Sobre o Projeto
+O projeto tem como objetivo a análise dos dados de um varejo localizado no estado de Pernambuco, que comercializa produtos como alimentos, itens para o lar, materiais de higiene e limpeza, entre outros. O varejo está presente em várias cidades do estado, e os dados analisados dizem respeito a compras, cadastro de clientes, campanhas de marketing e reclamações.
 
-🧩 Bases Utilizadas
-O projeto utilizou 4 datasets distintos, que foram posteriormente unificados:
+🧠 Objetivos
+Realizar uma análise exploratória dos dados (EDA);
 
-df_cadastral: Informações dos clientes (perfil, faixa etária, renda, score, status de cadastro etc.)
+Tratar e limpar dados inconsistentes;
 
-df_compras: Históricos de compras dos clientes (data, valor, categoria, forma de pagamento etc.)
+Criar variáveis úteis para análise;
 
-df_campanhas: Registro de interações com campanhas de marketing (envio, abertura, clique, conversão)
+Realizar agregações para entender o comportamento dos clientes;
 
-df_reclamacoes: Histórico de reclamações feitas por clientes (tipo, canal, status, tempo de resposta)
+Identificar padrões de consumo, reclamações e conversão em campanhas;
 
-⚙️ Etapas do Projeto
-📦 Importação e tratamento de dados
+Gerar visualizações para apoiar tomadas de decisão;
 
-Leitura de arquivos no Google Colab
+Unificar todas as informações em um dataset final para uso em dashboards (Power BI).
 
-Conversão de tipos, preenchimento de nulos e criação de colunas derivadas
+🗂️ Conjuntos de Dados Utilizados
+COMPRAS.xlsx: Histórico de compras dos clientes;
 
-🔍 Análise Exploratória (EDA)
+CADASTRAL.xlsx: Informações demográficas e de cadastro dos clientes;
 
-Distribuições demográficas
+CAMPANHAS.xlsx: Registro de campanhas de marketing, interações e conversões;
 
-Análise de canais de captação e status de cadastro
+RECLAMACOES.xlsx: Detalhes sobre as reclamações realizadas pelos clientes.
 
-Correlações entre score, renda e comportamento de compra
+🔧 Principais Etapas
+1. Importação e Análise Exploratória (EDA)
+Verificação de tipos de dados, valores nulos, datas inconsistentes e distribuição de colunas;
 
-📈 Geração de Gráficos (Visualizações com Python/Seaborn/Matplotlib)
+Exploração de campos como status de entrega, faixa etária, score inicial, canais de campanha etc.
 
-10+ gráficos sobre comportamento de compra
+2. Tratamento de Dados
+Remoção de valores nulos e inconsistentes;
 
-10+ gráficos sobre campanhas de marketing
+Conversão de tipos (ex: valor_compra para float);
 
-10+ gráficos sobre status e tipo de reclamações
+Exclusão de datas futuras ou inválidas;
 
-15 gráficos integrando as quatro bases para análise de negócio
+Criação de colunas booleanas (sexo_bool, converteu_em_compra_bool, etc.).
 
-🧠 Insights Gerados
+3. Criação de Variáveis
+Agrupamento de métricas como:
 
-Clientes com score inicial mais baixo tendem a estar inativos
+Total gasto por cliente;
 
-Alta proporção de reclamações pendentes em certos canais (ex: aplicativo)
+Quantidade de compras;
 
-Clientes que mais convertem campanhas não são necessariamente os que mais compram
+Parcelamento;
 
-Canais com mais reclamações não resolvidas revelam falhas de atendimento
+Taxa de conversão por canal;
 
-💼 Análises Financeiras (Varejo)
-Faturamento total e mensal
+Reclamações por cliente.
 
-Ticket médio por cliente, canal, e tipo de produto
+4. Visualizações Criadas
+Distribuição de clientes por faixa etária;
 
-Volume de compras parceladas vs. à vista
+Status de entrega (gráfico de pizza);
 
-Categoria mais lucrativa
+Taxa de conversão por canal de campanha (com paleta personalizada);
 
-Comparativo entre canais de venda (online, presencial, aplicativo)
+Funil de marketing (enviados, abertos, clicados, convertidos);
 
-📊 Visualizações Criadas
-Gráficos de barra, linha, boxplot e empilhados
+Distribuição do score inicial;
 
-Estilo visual padronizado: fundo cinza claro, fontes roxas (paleta "Purples"), títulos com destaque
+Boxplot comparando score entre clientes ativos e inativos.
 
-Gráficos com foco em clareza executiva e storytelling
+5. Unificação de Dados
+Todos os dados tratados foram unidos em um único DataFrame (df_unificado) e exportados para um .csv, pronto para visualização em Power BI.
 
-🧩 Conclusão do Projeto
-Este projeto sintetiza uma jornada completa de análise de dados: desde a manipulação bruta até a extração de insights estratégicos, combinando conhecimento técnico (Pandas, Matplotlib, Seaborn) com raciocínio de negócio.
+📈 Ferramentas Utilizadas
+Python (Pandas, NumPy, Seaborn, Matplotlib)
 
-A entrega final foi estruturada em uma apresentação clara, visual e de fácil compreensão para diferentes públicos, com foco em:
+Google Colab
 
-Comunicação visual
+Excel
 
-Geração de valor para o negócio
+Power BI (para visualização final)
 
-Capacidade de diagnóstico e recomendação
+📎 Resultado Final
+Arquivo final exportado: df_unificado_para_powerbi.csv
 
-🧠 Possíveis Extensões Futuras
-Construção de modelo de churn (prever inatividade de clientes)
+Visualizações ricas e informativas para apoio à tomada de decisão;
 
-Clusterização de perfis de cliente
+Análises que ajudam a entender o perfil dos clientes, a efetividade das campanhas e pontos críticos como canais de reclamação e satisfação.
 
-Automatização de alertas para canais com alta reincidência de problemas
-
-Deploy via dashboard (ex: Power BI, Streamlit)
-
+👩‍💻 Autoria
+Projeto desenvolvido por Lívia de Santana Pessôa como parte da formação em Análise de Dados da Telós & Neurotech.
